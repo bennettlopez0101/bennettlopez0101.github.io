@@ -1,0 +1,69 @@
+<!-- blopez17@georgefox.edu -->
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    <link rel="stylesheet" href="index.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+	    <script src = "APICalls.js"></script>
+	    <!-- Fonts -->
+	    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+	</head>
+	
+	<body onload="getData(&#34;.INX&#34;)">
+	    
+	    <div class = "theGrid">
+	        <div id = "hedder" class = "headder"> Wellness &nbsp;&nbsp;in &nbsp;&nbsp;the &nbsp;&nbsp;Midst&nbsp;&nbsp; of &nbsp;&nbsp;Panic</div>
+	        
+	        <div class = "topSection">
+    	        <div class = "graph">
+    	            <canvas id="chart"></canvas>
+    	        </div>
+	            <div class = "TopList"></div>
+    	        <div class = "messageBoard" id = "messageBoard"></div>
+    	        <div class = "bottomButtons">
+    	            <button class = "btn" id = "b1" type="button" onClick = "getData(&#34;SWN&#34;)">Southwestern En.</button>
+    	            <button class = "btn" id = "b2" type="button" onClick = "getData(&#34;NOG&#34;)">Northern Oil & Gas</button>
+    	            <button class = "btn" id = "b3" type="button" onClick = "getData(&#34;ENPH&#34;)">Enphase Energy Inc.</button>
+    	            <button class = "btn" id = "b4" type="button" onClick = "getData(&#34;AAPL&#34;)">Apple inc</button>
+    	            <button class = "btn" id = "b5" type="button" onClick = "getData(&#34;LRCX&#34;)">Lam Reaserch Corp</button>
+    	            <div id = "b6">
+    	                <input class = "btn FormInput" type="text" id="newStock" name="newStock" placeholder = "i.e AAPL">
+    	                <button class = "btn FormBtn" type="button" onClick = "executeForm()"> Submit</button>
+	                </div>
+    	        </div>
+    	        
+	        </div>
+	        
+	        <div class = "MiddleDivide">Isn't This Stressful?</div>
+	        
+	        <div class = "bottomSection">
+	            <div class = "rightExplination">
+	                
+	                <p>This photo was chosen based on the stock index. In the end, we hope it calms your nerves in these uncertian times. Enjoy</p>
+	                <button id = "catBtn" type="button" onClick = "calculateCatInfo(true, 0)">More Cats!</button>
+	            
+	            </div>
+	            
+	            <div class = "catPhotoHolder">
+	                <img class = "catPhoto">
+	            </div>
+	            
+	            <div class = "APIDescription">Chart Framework: <a href = "https://www.chartjs.org">https://www.chartjs.org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finace API: <a href ="https://www.alphavantage.co">https://www.alphavantage.co</a><br>Github: <a href ="https://github.com/bennettlopez0101/bennettlopez0101.github.io">https://github.com/bennettlopez0101/bennettlopez0101.github.io</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cat Facts!: <a href ="https://alexwohlbruck.github.io/cat-facts/docs/">https://alexwohlbruck.github.io/cat-facts/docs/</a><br>Reddit Cat Photos: <a href ="https://docs.thecatapi.com">https://docs.thecatapi.com</a></div>
+	            
+	            <div class = "bottomList"></div>
+	        </div>
+	    </div>
+	    
+	    
+	    
+	    
+	    
+	    
+	</body>
+</html>
