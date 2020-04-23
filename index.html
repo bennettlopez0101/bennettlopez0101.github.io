@@ -1,0 +1,108 @@
+<!-- blopez17@georgefox.edu -->
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    <!-- CSS and JS -->
+	    <script src = "sandbox.js"></script>
+	    <link rel="stylesheet" href="sandbox.css">
+	    <!-- Libraries -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	    <!-- Fonts -->
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+	</head>
+	
+	<body onLoad = "run(&#34;.INX&#34;, &#34;money&#34;)">
+	    <div class = "theGrid">
+	        <div class = "titleBar">
+	            <div class = "theTitle">Wellness &nbsp;&nbsp;in &nbsp;&nbsp;the &nbsp;&nbsp;Midst&nbsp;&nbsp; of &nbsp;&nbsp;Panic</div>
+	            <input class = "btn FormInput" type="text" id="newStock" name="newStock" placeholder = "Search Stocks (i.e AAPL)">
+	            
+	        </div>
+	        <div class = "buttonBar">
+	            <button class = "btn" id = "b1" type="button" onClick = "getData(&#34;AAPL&#34;); getArticle(&#34;Apple&#34;)">Apple</button>
+	            <button class = "btn" id = "b2" type="button" onClick = "getData(&#34;MSFT&#34;); getArticle(&#34;Microsoft&#34;)">Microsoft</button>
+	            <button class = "btn" id = "b3" type="button" onClick = "getData(&#34;GOOGL&#34;);getArticle(&#34;Goolge&#34;)">Goolge</button>
+	            <button class = "btn" id = "b4" type="button" onClick = "getData(&#34;TSLA&#34;); getArticle(&#34;Tesla&#34;)">Tesla</button>
+	            <button class = "btn" id = "b5" type="button" onClick = "getData(&#34;AMZN&#34;); getArticle(&#34;Amazon&#34;)">Amazon</button>
+	        </div>
+	        <div class = "graphWrapper">
+	            <div class = "background theGraph">
+	                <div class = "graph">
+	                    <canvas id="chart"></canvas>
+	                    <div class = "messageBoard" id = "messageBoard"></div>
+	                </div>
+	            </div>
+	            <div class = "background theStats">
+	                <div class = "TopList"></div>
+	            </div>
+	        </div>
+	        <div class = "articleWrapper">
+	            <div class = "background art1">
+	                <div class = "article art1Conent">
+	                    <div class = "photo1"> </div>
+	                    <div class = "art artSynopsis1"></div>
+	                    
+	                </div>
+	            </div>
+	           <div class = "background art2">
+	               <div class = "article art2Conent">
+	                   <div class = "photo2"> </div>
+	                   <div class = "art artSynopsis2"></div>
+	               </div>
+	           </div>
+	           <div class = "background art3">
+	               <div class = "article art2Conent">
+	                   <div class = "photo3"> </div>
+	                   <div class = "art artSynopsis3"></div>
+	               </div>
+	           </div>
+	        </div>
+	        <div class = "searchWrapper">
+	            <div class = "background Artsearch">
+	                <div class = "searchContent">
+	                    <div class = "SearchTitle"> THIS IS THE SEARCH TITLE</div>
+	                    <input class = "btn searchLable" type="text" name="newStock" id = "searchLable" placeholder = "Company">
+	                </div>
+	            </div>
+	        </div>
+	        <div class = "MiddleDivide">Isn't This Stressful?</div>
+	        
+	        
+	        <div class = "bottomSection">
+	            <div class = "rightExplination">
+	                
+	                <p>This photo was chosen based on the stock index. In the end, we hope it calms your nerves in these uncertian times. Enjoy</p>
+	                <button id = "catBtn" type="button" onClick = "calculateCatInfo(true, 0)">More Cats!</button>
+	            
+	            </div>
+	            
+	            <div class = "catPhotoHolder">
+	                <img class = "catPhoto">
+	            </div>
+	            
+	            <div class = "APIDescription">Chart Framework: <a href = "https://www.chartjs.org">https://www.chartjs.org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finace API: <a href ="https://www.alphavantage.co">https://www.alphavantage.co</a><br>Github: <a href ="https://github.com/bennettlopez0101/bennettlopez0101.github.io">https://github.com/bennettlopez0101/bennettlopez0101.github.io</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cat Facts!: <a href ="https://alexwohlbruck.github.io/cat-facts/docs/">https://alexwohlbruck.github.io/cat-facts/docs/</a><br>Reddit Cat Photos: <a href ="https://docs.thecatapi.com">https://docs.thecatapi.com</a></div>
+	            
+	            <div class = "bottomList"></div>
+	        </div>
+	        
+	        
+	        
+	        
+	    </div>
+	    
+	    
+	    
+	    
+	    
+	    <div class = "content"></div>
+	    <style>#headline{font-size: 30px;}</style>
+	    <style>#paragraph{font-size: 20px;}</style>
+	</body>
+</html>
+
+
+<!-- https://clearbit.com/docs?ruby#logo-api -->
+<!-- https://developer.nytimes.com/docs -->
