@@ -1,5 +1,5 @@
 var previousGraph = null;
-const defaultCatFacts = [
+var defaultCatFacts = [
     "Kittens sleep so much because the growth hormone is only released when they sleep.",
     "It has been estimated that a cat yawns on the average of 109,500 times in his life.",
     "A cat can jump up to six times its length.",
