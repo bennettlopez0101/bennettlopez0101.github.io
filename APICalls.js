@@ -287,7 +287,7 @@ function loadCatFacts(catNum) {
         },
         error: function(error) {
             $(".bottomList").html("");
-            var appendString = "<p>Cat Fact!<br>  "+ defaultCatFacts[Math.random() * 8] +"<p><br>"
+            var appendString = "<p>Cat Fact!<br>  "+ defaultCatFacts[Math.round(Math.random() * 8)] +"<p><br>"
             $(".bottomList").append(appendString);
         }
     });
