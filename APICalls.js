@@ -264,6 +264,7 @@ function loadTheCat(catNum) {
 function loadCatFacts(catNum) {
     $.ajax({
         url: "https://cat\-fact.herokuapp.com/facts",
+        Access-Control-Allow-Origin: *,
         type: "GET",
         format: "json",
         success: function(response) {
