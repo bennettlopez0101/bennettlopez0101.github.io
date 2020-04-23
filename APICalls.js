@@ -1,5 +1,15 @@
 var previousGraph = null;
-
+const defaultCatFacts = [
+    "Kittens sleep so much because the growth hormone is only released when they sleep.",
+    "It has been estimated that a cat yawns on the average of 109,500 times in his life.",
+    "A cat can jump up to six times its length.",
+    "Cats only sweat through their foot pads.",
+    "A female cat is called a “molly” or a “queen”.",
+    "Black cats are less likely to be adopted because of their \"appearance\".",
+    "Cats were mythic symbols of divinity in ancient Egypt.",
+    "Cats have 38 chromosomes in each zygote cell.",
+    "If they have ample water, cats can tolerate temperatures up to 133 °F."
+]
 function run(symbol) {
     try {
         getData(symbol);
@@ -8,12 +18,6 @@ function run(symbol) {
         console.log("ERROR");
     }
 }
-
-
-
-
-
-
 /**
  * https://www.alphavantage.co
  */
@@ -162,7 +166,6 @@ function enableButtons(disable) {
 
 function executeForm() {
     var text = document.getElementById("newStock");
-    console.log(text.value);
     getData(text.value);
     text.value = "";
 }
@@ -235,14 +238,10 @@ function loadTheCat(catNum) {
         format: "json",
         api_key: "0ff99fc6-df3a-4e1f-992e-859de2670739",
         success: function(response) {
-            console.log("Load Cats: " + catNum);
             jQuery.each(response, function(x, value) {
                 if (x === catNum) {
                     jQuery.each(value, function(y, z) {
-                        console.log(y + ", " + z);
                         if (y === "url") {
-                            console.log("CAT FOUND");
-                            console.log("<img class = \"catPhoto\" src=\"" + z + "\">");
                             $(".catPhotoHolder").html("<img class = \"catPhoto\" src=\"" + z + "\">");
                         }
                     });
@@ -262,39 +261,36 @@ function loadTheCat(catNum) {
 
 
 function loadCatFacts(catNum) {
+    var catFacts = [];
+    
     $.ajax({
         url: "https://cat\-fact.herokuapp.com/facts",
         type: "GET",
         format: "json",
         success: function(response) {
-            console.log("Load Facts: " + response);
             jQuery.each(response, function(x, value) {
                 
                 jQuery.each(value, function(y, z) {
                     
                     if (y === catNum) {
-                        
                         jQuery.each(z, function(first, second) {
-                            console.log(first + ", " + second);
                             if (first === "text") {
-                                console.log("FACT FOUND");
+                                catFacts.push(second);
                                 $(".bottomList").html("");
-                                var appendString;
-                                appendString = "<p>Cat Fact!<br>  "+ second +"<p><br>"
+                                var appendString = "<p>Cat Fact!<br>  "+ second +"<p><br>"
                                 $(".bottomList").append(appendString);
                             }
                         });
-                        
                     }
                 });
             });
         },
         error: function(error) {
-            console.log(error);
+            $(".bottomList").html("");
+            var appendString = "<p>Cat Fact!<br>  "+ defaultCatFacts[Math.random() * 8] +"<p><br>"
+            $(".bottomList").append(appendString);
         }
     });
-    
-    
 }
 
 function calculateCatInfo(random, num) {
