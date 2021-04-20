@@ -1,0 +1,1 @@
+curl -X DELETE -H "Content-Type: application/json" 192.168.56.101/blog/php/post/ -d '{"id":"1123123", "user_id": "990607062", "session_id":"SESSION"}'

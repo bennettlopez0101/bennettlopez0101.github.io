@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#TheGrid {
+    /** GRID SETTINGS */
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: 200px 200px 100px 50px 100px 50px;
+}
+
+#title {
+    padding-top: 50px;
+    font-size: 100px;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+#postText {
+    width: 50vw; 
+    height: 150px; 
+    border: 1px solid grey;
+    padding-left: 20px;
+}
+
+#stockName {
+    width: 50vw; 
+    height: 50px; 
+    border: 1px solid grey; 
+    padding-left: 20px;
+}
+
+#createPost {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    text-align: center;
+    padding: 10px;
+}
+
+#createStockName {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    text-align: center;
+    padding: 5px;
+}
+
+#recomendationTitle {
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+
+#recomendationTitle {
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+
+#recButtons {
+    grid-column: 1/5;
+    grid-row: 5/6;
+    /** GRID SETTINGS */
+    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 50px;
+}
+
+    #poor {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #good {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #excellent {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+
+#lastButtons {
+    grid-column: 1/5;
+    grid-row: 6/7;
+    /** GRID SETTINGS */
+    display: grid;
+    grid-template-columns: 20vw 10vw 10vw 10vw 10vw 10vw 10vw 20vw;
+    grid-template-rows: 50px;
+}
+
+    #submit {
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+
+    #back {
+        grid-column: 6/8;
+        grid-row: 1;
+    }

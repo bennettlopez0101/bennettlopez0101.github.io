@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" 192.168.56.101/blog/php/post/ -d '{"post_text":"THIS IS THE POST TEXT", "user_id":990607062, "session_id":"aklsdklasd", "stock_name":"APPL", "recomendation":"Poor"}'
